@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MWRP Ban Appeal Ticket — Transcript</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #1a1b1e;
+    color: #dcddde;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  .header {
+    background: #111214;
+    border-bottom: 1px solid #2a2b2f;
+    padding: 1.25rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  .header-icon {
+    width: 36px;
+    height: 36px;
+    background: #5865F2;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .header-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  .header-sub {
+    font-size: 12px;
+    color: #72767d;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+
+  .banner {
+    background: linear-gradient(135deg, #1e2124 0%, #23272a 100%);
+    border-bottom: 2px solid #5865F2;
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .banner-badge {
+    background: #ed4245;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 4px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    flex-shrink: 0;
+  }
+
+  .banner-text {
+    font-size: 13px;
+    color: #b9bbbe;
+  }
+
+  .banner-text strong {
+    color: #fff;
+  }
+
+  .messages {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+  }
+
+  .message-group {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    transition: background 0.1s;
+  }
+
+  .message-group:hover {
+    background: #1e2124;
+  }
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 2px;
+  }
+
+  .avatar.bot { background: #5865F2; color: #fff; font-size: 11px; }
+  .avatar.user { background: #3ba55d; color: #fff; }
+  .avatar.staff { background: #ed4245; color: #fff; }
+  .avatar.zyzif { background: #faa61a; color: #fff; }
+
+  .msg-body { flex: 1; min-width: 0; }
+
+  .msg-header {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin-bottom: 0.25rem;
+    flex-wrap: wrap;
+  }
+
+  .msg-name {
+    font-weight: 600;
+    font-size: 15px;
+  }
+
+  .name-bot { color: #5865F2; }
+  .name-user { color: #3ba55d; }
+  .name-staff { color: #ed4245; }
+  .name-zyzif { color: #faa61a; }
+
+  .role-badge {
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .badge-staff { background: rgba(237,66,69,0.2); color: #ed4245; border: 1px solid rgba(237,66,69,0.3); }
+  .badge-bot { background: rgba(88,101,242,0.2); color: #5865F2; border: 1px solid rgba(88,101,242,0.3); }
+  .badge-appellant { background: rgba(59,165,93,0.2); color: #3ba55d; border: 1px solid rgba(59,165,93,0.3); }
+
+  .msg-time {
+    font-size: 11px;
+    color: #72767d;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+
+  .msg-content {
+    color: #dcddde;
+    font-size: 15px;
+    line-height: 1.65;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
+  .msg-content a {
+    color: #00aff4;
+    text-decoration: none;
+  }
+
+  .msg-content a:hover { text-decoration: underline; }
+
+  .embed {
+    border-left: 4px solid #5865F2;
+    background: #2f3136;
+    border-radius: 0 4px 4px 0;
+    padding: 0.75rem 1rem;
+    margin-top: 0.5rem;
+    font-size: 13px;
+    color: #b9bbbe;
+    max-width: 520px;
+  }
+
+  .embed strong { color: #fff; }
+
+  .divider {
+    border: none;
+    border-top: 1px solid #2a2b2f;
+    margin: 1.5rem 0;
+  }
+
+  .divider-label {
+    text-align: center;
+    font-size: 11px;
+    color: #72767d;
+    font-family: 'IBM Plex Mono', monospace;
+    letter-spacing: 0.05em;
+    margin: -0.5rem 0 1.5rem;
+  }
+
+  .system-msg {
+    background: #1e2124;
+    border: 1px solid #2a2b2f;
+    border-radius: 6px;
+    padding: 0.6rem 1rem;
+    font-size: 12px;
+    color: #72767d;
+    font-family: 'IBM Plex Mono', monospace;
+    margin: 0.75rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .system-msg::before {
+    content: '⚙';
+    font-size: 14px;
+  }
+
+  .closed-banner {
+    background: rgba(237,66,69,0.1);
+    border: 1px solid rgba(237,66,69,0.3);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    margin: 1.5rem 0;
+    font-size: 13px;
+    color: #ed4245;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .highlight-msg .msg-content {
+    background: rgba(250,166,26,0.06);
+    border-left: 3px solid #faa61a;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0 4px 4px 0;
+    margin-top: 0.25rem;
+  }
+
+  .key-moment {
+    background: rgba(88,101,242,0.08);
+    border: 1px solid rgba(88,101,242,0.2);
+    border-radius: 8px;
+    padding: 0.6rem 1rem;
+    margin: 0.5rem 0;
+    font-size: 12px;
+    color: #8e96f5;
+    font-style: italic;
+  }
+
+  .footer {
+    background: #111214;
+    border-top: 1px solid #2a2b2f;
+    padding: 1.25rem 2rem;
+    text-align: center;
+    font-size: 12px;
+    color: #72767d;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+
+  .reply-quote {
+    border-left: 3px solid #4f545c;
+    padding-left: 0.6rem;
+    margin-bottom: 0.4rem;
+    font-size: 13px;
+    color: #72767d;
+    font-style: italic;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-icon">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057.1 18.082.114 18.105.132 18.12a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/></svg>
+  </div>
+  <div>
+    <div class="header-title"># ban-appeal — MWRP</div>
+    <div class="header-sub">MostWanted RP · Ticket Transcript · Apr 24, 2026</div>
+  </div>
+</div>
+
+<div class="banner">
+  <span class="banner-badge">Closed</span>
+  <span class="banner-text">Appeal filed by <strong>i4ni_.</strong> on behalf of <strong>hoolio5600</strong> — banned for use of the word "SIMP" — closed by <strong>phixey7</strong> without substantive review</span>
+</div>
+
+<div class="messages">
+
+  <!-- Ticket Tool open -->
+  <div class="message-group">
+    <div class="avatar bot">🎫</div>
+    <div class="msg-body">
+      <div class="msg-header">
+        <span class="msg-name name-bot">Ticket Tool</span>
+        <span class="role-badge badge-bot">BOT</span>
+        <span class="msg-time">Apr 24, 2026 9:05 AM</span>
+      </div>
+      <div class="msg-content">Hello @i4ni_., @[Bot] 09/21/2025
+
+Thank you for opening a Ban Appeal Ticket.
+
+In order for us to help you with your ban appeal, please provide us with the following:
+
+1. Send a screenshot of your ban message
+   Attempt to load into the server and the ban message will pop up. Screenshot it and send it here.
+
+After you send the screenshot, begin to explain your situation and have clips prepared. Clips are a REQUIREMENT for all ban appeals.</div>
+    </div>
+  </div>
+
+  <!-- Player lookup -->
+  <div class="message-group">
+    <div class="avatar bot">🤖</div>
+    <div class="msg-body">
+      <div class="msg-header">
+        <span class="msg-name name-bot">Streamclash | Tickets</span>
+        <span class="role-badge badge-bot">BOT</span>
+        <span class="msg-time">Apr 24, 2026 9:05 AM</span>
+      </div>
+      <div class="msg-content">Automatic Player Lookup for @i4ni_. | MWRP</div>
+      <div class="embed">
+        <strong>i4ni_.</strong><br>
+        UUID: 71b73808-0a86-11f0-a94f-a8a159c75165<br>
+        Discord: &lt;@1119812292666736782&gt;<br>
+        ✅ Ban Status: No active bans<br>
+        🛡️ Reaper AC: Clean · 🔰 Fini AC: Clean<br><br>
+        <strong>⚠️ Multiple Licenses Detected</strong> — 6 licenses linked to UUID<br>
+        Characters include: Chris Benoit, Aldo Raine, King Von, Don Gotti, Timmy Toot, TreDavious Jones, and others.
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+  <div class="divider-label">— APPEAL BEGINS —</div>
+
+  <!-- i4ni opens -->
+  <div class="message-group">
+    <div class="avatar user">i</div>
+    <div class="msg-body">
+      <div class="msg-header">
+        <span class="msg-name name-user">i4ni_.</span>
+        <span class="role-badge badge-appellant">APPELLANT</span>
+        <span class="msg-time">Apr 24, 2026 9:06 AM</span>
+      </div>
+      <div class="msg-content">okay... I get up and again, another one of my members is banned for some rule that simply is NOTHING but grey area. user 506360217873809410 was "ToS" banned for saying — "SIMP"</div>
+    </div>
+  </div>
+
+  <!-- zyzif response -->
+  <div class="message-group">
+    <div class="avatar zyzif">Z</div>
+    <div class="msg-body">
+      <div class="msg-header">
+        <span class="msg-name name-zyzif">zyzif</span>
+        <span class="role-badge badge-staff">STAFF</span>
+        <span class="msg-time">Apr 24, 2026 9:07 AM</span>
+      </div>
+      <div class="msg-content">@hoolio5600
+why isn't he making a ban appeal?
+also its not grey area, if you look at twitch TOS its on there</div>
+    </div>
+  </div>
+
+  <!-- i4ni first big argument -->
+  <div class="message-group">
+    <div class="avatar user">i</div>
+    <div class="msg-body">
+      <div class="msg-header">
+        <span class="msg-name name-user">i4ni_.</span>
+        <span class="role-badge badge-appellant">APPELLANT</span>
+        <span class="msg-time">Apr 24, 2026 9:08 AM</span>
+      </div>
+      <div class="msg-content">1. THE WORD "SIMP" IS NOT A TOS VIOLATION ON ANY MAJOR STREAMING PLATFORM
+─────────────────────────────
+• Your rules explicitly state: "Breaking the TOS of any major streaming platform is NOT tolerated."
+• Twitch, YouTube, and Facebook Gaming do NOT classify "SIMP" as a banned, hateful, or prohibited term.
+• In fact, "SIMP" was widely used by streamers across all major platforms for years with zero enforcement action.
+• If the ban is being justified under this rule, the burden is on staff to provide documentation showing which platform's TOS was violated — because that documentation does not exist.
+
+2. "SIMP" DOES NOT MEET THE DEFINITION OF A DEROGATORY TERM UNDER YOUR OWN RULES
+─────────────────────────────
+• Your rules list specific examples of prohibited degrading language: "whore" and "slut" — words with clear sexual harassment context.
+• "SIMP" is mainstream internet slang. It carries no racial, sexual, gender-based, or disability-related connotation.
+• Your rules state words must be "harmful to any race, sex, gender, or disability" — SIMP fails this test entirely.
+
+3. THE PUNISHMENT IS DISPROPORTIONATE AND INCONSISTENT WITH YOUR OWN DISCIPLINARY FRAMEWORK
+─────────────────────────────
+• A permanent ban is your most severe punishment, reserved for extreme violations like sexual harassment, doxxing, or cheating.
+• Was the player given any prior warning? Any strike? Any opportunity to correct the behavior?
+• If no warning was issued before a permanent ban for a single use of mainstream slang, that is inconsistent enforcement.
+
+4. SELECTIVE ENFORCEMENT CONCERN
+─────────────────────────────
+• If "SIMP" is a bannable offense, it must be enforced universally and consistently.
+• We ask staff to confirm whether this word has resulted in bans for any other community member.
+
+THIS IS NOT A VIOLATION OF ToS ON TWITCH. You are incorrect.</div>
+    </div>
+  </div>
+
+  <!-- i4ni context -->
+  <div class="message-group">
+    <div class="avatar user">i</div>
+    <div class="msg-body">
+      <div class="msg-header">
+        <span class="msg-name name-user">i4ni_.</span>
+        <span class="role-badge badge-appellant">APPELLANT</span>
+        <span class="msg-time">Apr 24, 2026 9:10 AM</span>
+      </div>
+      <div class="msg-content">He works and runs his own construction company. I work in IT sales. It's a Friday, I have time, he doesn't. I've cross-checked EVERY platform — NO streaming platform bans for the term SIMP.</div>
+    </div>
+  </div>
+
+  <!-- zyzif sends AI screenshot -->
+  <div class="message-group highlight-msg">
+    <div class="avatar zyzif">Z</div>
+    <div class="msg-body">
+      <div class="msg-header">
+        <span class="msg-name name-zyzif">zyzif</span>
+        <span class="role-badge badge-staff">STAFF</span>
+        <span class="msg-time">Apr 24, 2026 9:11 AM</span>
+      </div>
+      <div class="msg-content">[Sent an AI-generated screenshot as "evidence"]
+"it wouldn't be on our TOS list if it wasn't TOS on twitch"</div>
+      <div class="key-moment">⚠️ Note: The image sent was an AI-generated summary citing IGN — not Twitch's official Terms of Service documentation.</div>
+    </div>
+  </div>
+
+  <!-- i4ni rebuttal to AI response -->
+  <div class="message-group">
+    <div class="avatar user">i</div>
+    <div class="msg-body">
+      <div class="msg-header">
+        <span class="msg-name name-user">i4ni_.</span>
+        <span class="role-badge badge-appellant">APPELLANT</span>
+        <span class="msg-time">Apr 24, 2026 9:13 AM</span>
+      </div>
+      <div class="msg-content">I appreciate the response, but I have to be transparent — what was sent appears to be an AI-generated answer, not official Twitch documentation. The sources cited reference IGN, which is a gaming media outlet, not Twitch's actual Terms of Service or Help Center.
+
+We are formally requesting the following before this ban stands:
+• A direct link to the official Twitch ToS page that explicitly prohibits the word "simp" as a standalone term
+• If the ban is based on context, we need to see the clip showing it was used in a targeted, harassing manner
+
+Twitch's actual policy: harassment violations are based on behavior and intent, not individual words in isolation.
+
+Furthermore, Twitch has hosted "simp" emotes, "simp" subscriber badges, and streamers openly using the term for years. Asmongold calls people simps daily and has never been banned for it.
+
+Also — your server previously banned for "retard/retarded" and later lifted that from your own rules. Twitch similarly evolved on this. The same logic applies here: if the word requires targeted use toward a specific person before it's a violation, then a single casual use in RP context cannot justify a permanent ban.
+
+There is no "ToS list" anywhere in your public ruleset. The only ToS reference in your rules is:
+"Breaking the TOS of any major streaming platform is NOT tolerated."
+
+That is it. No list. No addendum. No linked document. Players cannot be held to a standard they were never shown.
+
+We are asking:
+• Provide the actual "ToS list" you are referencing and where it is published
+• Provide the official Twitch policy page confirming "simp" is a prohibited standalone term
+• Or acknowledge this ban was issued without proper grounds and reverse it
+
+[Screenshot of financial investment point also submitted]</div>
+    </div>
+  </div>
+
+  <hr class="divider">
+  <div class="divider-label">— CONTEXT OF THE INCIDENT REVEALED —</div>
+
+  <!-- Full context -->
+  <div class="message-group">
+    <div class="avatar user">i</div>
+    <div class="msg-body">
+      <div class="msg-header">
+        <span class="msg-name name-user">i4ni_.</span>
+        <span class="role-badge badge-appellant">APPELLANT</span>
+        <span class="msg-time">Apr 24, 2026 10:03 AM</span>
+      </div>
+      <div class="msg-content">I now have full context of the situation after reviewing the clips.
+
+Here is what actually happened:
+
+Foolio and Ashley (user 5346234358051635410) are a real-life married couple who were both present in the city at the time of the incident. Foolio RPs as a pimp character and referred to Ashley as a "bitch" — this is consistent with their established RP dynamic and how they interact with each other in and out of the server. This is their relationship. It is not open for third party interpretation or intervention. (Ashley can confirm this herself if needed)
+
+Your officer chose to insert himself into this interaction unprompted. He did not like the way Foolio was speaking to Ashley, despite the fact that she is his IRL wife, they have children together, and this is how they communicate. The officer had zero context for their dynamic and zero business interjecting himself into it.
+
+Foolio responded by calling the officer a "simp" and a "white knight" — meaning he was inserting himself into a situation he didn't understand, trying to defend a woman who did not need or ask for his defense. That is the textbook definition of both terms. He was being a SIMP. Plain and simple.
+
+This was not harassment. This was not a targeted sexual insult. This was a player correctly identifying an officer who overstepped and calling him out for it.
+
+Twitch's own policy states that "simp" only becomes a violation when used repeatedly in a harassing manner to negatively refer to someone's sexual practices. A single use in direct response to an officer inserting himself into someone else's relationship does not meet that standard.
+
+What this situation looks like is someone had their ego bruised and argued for a ban. Respectfully — we need higher up staff to review this and ACTUALLY look at it.</div>
+      <div class="key-moment">📋 Key point: "SIMP" was used once, in direct response to staff overstepping. It was not directed at anyone's sexual practices. None of Twitch's three conditions for a violation are met.</div>
+    </div>
+  </div>
+
+  <!-- Twitch clarification -->
+  <div class="message-group">
+    <div class="avatar user">i</div>
+    <div class="msg-body">
+      <div class="msg-header">
+        <span class="msg-name name-user">i4ni_.</span>
+        <span class="role-badge badge-appellant">APPELLANT</span>
+        <span class="msg-time">Apr 24, 2026 10:13 AM</span>
+      </div>
+      <div class="msg-content">AND CLARIFICATION PER TWITCH — I did reach out to their support directly.
+
+Twitch would not classify this interaction as a violation of ToS. The word itself, per Twitch, is NOT a standalone violation of ToS.
+
+[Screenshot of Twitch policy card submitted — showing all 3 conditions required for enforcement]
+[Medal.tv clip of the full incident submitted]</div>
+    </div>
+  </div>
+
+  <hr class="divider">
+  <div class="divider-label">— STAFF RESPONSE —</div>
+
+  <!-- phixey enters -->
+  <div class="message-group highlight-msg">
+    <div class="avatar staff">P</div>
+    <div class="msg-body">
+      <div class="msg-header">
+        <span class="msg-name name-staff">phixey7</span>
+        <span class="role-badge badge-staff">STAFF</span>
+        <span class="msg-time">Apr 24, 2026 10:31 AM</span>
+      </div>
+      <div class="msg-content">"You remember the last thing you said before you got banned — to the staff members"</div>
+      <div class="key-moment">⚠️ No response to any of the 4 documented arguments. No Twitch ToS link provided. No counter to the context presented.</div>
+    </div>
+  </div>
+
+  <!-- i4ni shares clip -->
+  <div class="message-group">
+    <div class="avatar user">i</div>
+    <div class="msg-body">
+      <div class="msg-header">
+        <span class="msg-name name-user">i4ni_.</span>
+        <span class="role-badge badge-appellant">APPELLANT</span>
+        <span class="msg-time">Apr 24, 2026 10:31 AM</span>
+      </div>
+      <div class="msg-content"><a href="https://medal.tv/games/gta-v/clips/mzyz8BFnme6UToukh">https://medal.tv/games/gta-v/clips/mzyz8BFnme6UToukh</a>
+
+I'm sorry — are you meaning ME or are you talking about Tommy?
+Nothing in this clip is TOS. I watched the full 5-minute interaction.</div>
+    </div>
+  </div>
+
+  <!-- phixey confusion -->
+  <div class="message-group">
+    <div class="avatar staff">P</div>
+    <div class="msg-body">
+      <div class="msg-header">
+        <span class="msg-name name-staff">phixey7</span>
+        <span class="role-badge badge-staff">STAFF</span>
+        <span class="msg-time">Apr 24, 2026 10:32 AM</span>
+      </div>
+      <div class="msg-content">"Are you banned or him?"</div>
+    </div>
+  </div>
+
+  <!-- i4ni clarifies -->
+  <div class="message-group">
+    <div class="avatar user">i</div>
+    <div class="msg-body">
+      <div class="msg-header">
+        <span class="msg-name name-user">i4ni_.</span>
+        <span class="role-badge badge-appellant">APPELLANT</span>
+        <span class="msg-time">Apr 24, 2026 10:33 AM</span>
+      </div>
+      <div class="msg-content">I've made the ticket on HIS behalf because he's working — which tells me you didn't even bother reading ANY of what was written. All of everything I have written matters and you clearly didn't take the time to do that.</div>
+    </div>
+  </div>
+
+  <!-- phixey closes -->
+  <div class="message-group highlight-msg">
+    <div class="avatar staff">P</div>
+    <div class="msg-body">
+      <div class="msg-header">
+        <span class="msg-name name-staff">phixey7</span>
+        <span class="role-badge badge-staff">STAFF</span>
+        <span class="msg-time">Apr 24, 2026 10:33 AM</span>
+      </div>
+      <div class="msg-content">"Yeah this will be closed then. He can appeal himself. He's a grown man he can deal with his own appeal."</div>
+      <div class="key-moment">⚠️ Appeal closed on procedural technicality. Zero engagement with the substance of the arguments. No ToS documentation ever provided.</div>
+    </div>
+  </div>
+
+  <!-- i4ni final -->
+  <div class="message-group">
+    <div class="avatar user">i</div>
+    <div class="msg-body">
+      <div class="msg-header">
+        <span class="msg-name name-user">i4ni_.</span>
+        <span class="role-badge badge-appellant">APPELLANT</span>
+        <span class="msg-time">Apr 24, 2026 10:34 AM</span>
+      </div>
+      <div class="msg-content">This is coming from a grown man who can't fully read the ticket — because THIS is an issue not just for us, but for future references in the city.</div>
+    </div>
+  </div>
+
+  <!-- phixey last word -->
+  <div class="message-group">
+    <div class="avatar staff">P</div>
+    <div class="msg-body">
+      <div class="msg-header">
+        <span class="msg-name name-staff">phixey7</span>
+        <span class="role-badge badge-staff">STAFF</span>
+        <span class="msg-time">Apr 24, 2026 10:34 AM</span>
+      </div>
+      <div class="msg-content">"Lose your attitude. I'm not here to argue with you. Have a good one."</div>
+    </div>
+  </div>
+
+  <div class="closed-banner">
+    🔒 Ticket closed by phixey7 — Apr 24, 2026 10:35 AM — No ToS documentation provided. No substantive response to any argument raised. Closed on procedural grounds only.
+  </div>
+
+  <hr class="divider">
+  <div class="divider-label">— SUMMARY —</div>
+
+  <div style="background:#1e2124; border:1px solid #2a2b2f; border-radius:8px; padding:1.25rem 1.5rem; font-size:13px; color:#b9bbbe; line-height:1.75;">
+    <p style="color:#fff; font-weight:600; margin-bottom:0.75rem;">What was argued — and never rebutted:</p>
+    <p>✅ "SIMP" was used once, in direct RP context, not as a sexual insult toward any individual</p>
+    <p>✅ Twitch's own policy requires repeated, targeted harassment toward a specific person's sexual practices — none of which occurred here</p>
+    <p>✅ Staff cited an AI-generated IGN article as ToS evidence — not official Twitch documentation</p>
+    <p>✅ No "ToS list" exists anywhere in MWRP's public ruleset</p>
+    <p>✅ The officer who initiated the ban inserted himself unprompted into a married couple's established RP dynamic</p>
+    <p>✅ A permanent ban was issued with no prior warnings — disproportionate by any standard</p>
+    <p style="margin-top:0.75rem; color:#ed4245;">Staff response: closed the ticket without addressing a single point.</p>
+  </div>
+
+</div>
+
+<div class="footer">
+  MWRP Ban Appeal Transcript · hoolio5600 · Apr 24, 2026 · Generated for community reference
+</div>
+
+</body>
+</html>
